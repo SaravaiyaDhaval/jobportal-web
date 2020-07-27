@@ -1,0 +1,39 @@
+#Header {
+    
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    right: 0;
+
+    .navbar-dark {
+        
+        // background-image: url(https://treehousecreativeco.com/wp-content/uploads/2019/04/footer-skyline-background.jpg);
+        // background-size: contain;
+        // background-position: top;
+        .navbar-brand {
+            color: #fff;
+            filter: invert(1)drop-shadow(2px 4px 6px black);
+
+            .logo-style {
+                height: 45px;
+                margin: -10px 0px;
+            }
+        }
+    }
+
+    .search-nav-item {
+        margin-left: 60px;
+
+        .form-control {
+            min-width: 600px;
+            max-width: 100%;
+        }
+    }
+
+    .dropdown {
+        .dropdown-menu {
+            transform: translate3d(-120px, 40px, 0px) !important;
+        }
+    }
+}

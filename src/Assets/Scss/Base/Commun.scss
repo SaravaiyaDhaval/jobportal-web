@@ -1,0 +1,39 @@
+.app-main {
+    .side-bar-nav {
+        padding-top: 59px;
+        display: flex;
+
+        .main-left-side-nav {
+            position: relative;
+            // width: 240px;
+            // min-width: 240px;
+        }
+
+        .main-right-side-nav {
+            width: 100%;
+            -webkit-transition-timing-function: linear, linear, ease;
+            transition-timing-function: linear, linear, ease;
+            -webkit-transition-duration: .5s, .5s, .55s;
+            transition-duration: .5s, .5s, .55s;
+            -webkit-transition-property: top, bottom, width;
+            transition-property: top, bottom, width;
+
+            .main-route {
+                position: relative;
+                min-height: 693px;
+                // background: #f1f3f6;
+                padding: 15px;
+                overflow: hidden;
+                z-index: 0;
+
+            }
+
+        }
+    }
+
+}
+
+// Color
+// .indigo {
+//     background-color: #1b74bc !important;
+// }

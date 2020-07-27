@@ -1,0 +1,44 @@
+#Sidebar {
+    width: 234px;
+
+    .side-nav.wide.slim {
+        width: 3.75rem !important;
+    }
+
+    .side-nav {
+        transform: translateX(0px);
+        position: fixed !important;
+        top: 59px;
+        z-index: 1;
+
+        .collapsible>li {
+            border-radius: 2px;
+            display: grid;
+        }
+
+        .custom-scrollbar {
+            .collapsible {
+                li {
+                    &.active {
+                        .collapsible-body {
+                            display: block;
+                            li{
+                                height: 36px;
+                                a{
+                                    width: 100%;
+                                
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.mini-sidebar {
+        width: 54px;
+    }
+
+}

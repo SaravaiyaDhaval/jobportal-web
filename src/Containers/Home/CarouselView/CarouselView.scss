@@ -1,0 +1,18 @@
+#Carousel {
+    .carousel-inner {
+        max-height: 250px;
+        overflow: hidden;
+        margin-bottom: 25px;
+
+        .carousel-item {
+            position: relative;
+            margin-bottom: 0 !important;
+            z-index: 0;
+
+            .col-md-2 {
+                padding-right: 5px;
+                padding-left: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+// .Login {
+    .modal-backdrop.show {
+        opacity: 0;
+    }
+    
+    .modal {
+        .modal-content {
+            z-index: 11;
+            .card {
+                width: 100% !important;
+                height: 100%;
+    
+                .rgba-stylish-strong {
+                    height: 100%;
+                    background-color: #00000078;
+                }
+                .password-field{
+                    margin-bottom: 4px;
+                }
+                .social-media-btn{
+                   
+                    
+                }
+                .md-form{
+                    .prefix{
+                        &.active{
+                            color: #1bcebc;
+                        }
+                    }
+                    label{
+                        color: #ffffff !important;
+                        &.active{
+                            color: #ffffff !important; 
+                        }
+                    }
+                    input{
+                        border-bottom: 1px solid #ced4da;
+                        color: #ffffff !important; 
+                        &.active, &:hover, &:focus{
+                            border-bottom: 1px solid #1bcebc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // }
