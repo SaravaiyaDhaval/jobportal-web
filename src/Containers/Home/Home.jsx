@@ -10,9 +10,9 @@ class Home extends Component {
     return (
       <div id="Home">
         <CarouselView />
-        <ProductCursole sliderTitle={"Recommanded products"} />
-        <ProductCursole sliderTitle={"Letest products"} />
-        <ProductCursole sliderTitle={"Upcomming products"} />
+        <ProductCursole sliderTitle={"Letest Jobs"} />
+        <ProductCursole sliderTitle={"Fresher's Jobs"} />
+        <ProductCursole sliderTitle={"Top rated jobs"} />
 
       </div>
     );

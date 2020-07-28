@@ -37,3 +37,46 @@
 // .indigo {
 //     background-color: #1b74bc !important;
 // }
+.md-form {
+    .react-tel-input {
+        .form-control {
+            width: 100%;
+        }
+
+        .flag-dropdown,
+        .flag-dropdown.open {
+            background-color: transparent;
+            border: 0;
+
+            & .selected-flag {
+                background: transparent;
+
+                .flag {
+                    .arrow {
+                        border-top: 4px solid #fff;
+                    }
+
+                    .arrow.up {
+                        border-bottom: 4px solid #fff;
+                        border-top: 0;
+                    }
+                }
+            }
+
+            .country-list {
+                background: #f8f9fa;
+                color: black;
+            }
+        }
+    }
+}
+
+.date-lable {
+    transform: translateY(-15px) scale(01) !important;
+    transform-origin: 0 0 !important;
+}
+.number-lable{
+    transform: translateY(-14px) scale(0.7) !important;
+    transform-origin: 0 0 !important;
+    font-weight: 500 !important;
+}

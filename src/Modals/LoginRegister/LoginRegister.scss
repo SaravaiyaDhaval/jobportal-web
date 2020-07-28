@@ -1,48 +1,104 @@
 // .Login {
-    .modal-backdrop.show {
-        opacity: 0;
-    }
-    
-    .modal {
-        .modal-content {
-            z-index: 11;
-            .card {
-                width: 100% !important;
+.modal-backdrop.show {
+    opacity: 0;
+}
+
+.modal {
+
+    // position: relative;
+    .modal-content {
+        z-index: 11;
+position: relative;
+        .card {
+            width: 100% !important;
+            height: 100%;
+
+            .rgba-stylish-strong {
                 height: 100%;
-    
-                .rgba-stylish-strong {
-                    height: 100%;
-                    background-color: #00000078;
-                }
-                .password-field{
-                    margin-bottom: 4px;
-                }
-                .social-media-btn{
-                   
-                    
-                }
-                .md-form{
-                    .prefix{
-                        &.active{
-                            color: #1bcebc;
-                        }
+                background-color: #00000078;
+            }
+
+            .password-field {
+                margin-bottom: 4px;
+            }
+
+            .social-media-btn {}
+
+            .md-form {
+                .prefix {
+                    &.active {
+                        color: #ffffff;
                     }
-                    label{
+                }
+
+                label {
+                    color: #ffffff !important;
+
+                    &.active {
                         color: #ffffff !important;
-                        &.active{
-                            color: #ffffff !important; 
-                        }
                     }
-                    input{
-                        border-bottom: 1px solid #ced4da;
-                        color: #ffffff !important; 
-                        &.active, &:hover, &:focus{
-                            border-bottom: 1px solid #1bcebc;
-                        }
+                }
+
+                input {
+                    border-bottom: 1px solid #ffffff;
+                    color: #ffffff !important;
+
+                    &.active,
+                    &:hover,
+                    &:focus {
+                        border-bottom: 2px solid #ffffff;
+                    }
+                }
+            }
+
+            .MuiFormControl-root {
+                .MuiFormLabel-root {
+                    color: #fff;
+                }
+
+                .MuiInputBase-root {
+                    color: #fff;
+
+                    &::before {
+                        border-bottom: 1px solid #fff;
+                    }
+
+                    &::after {
+                        border-bottom: 2px solid #fff;
+                    }
+                }
+
+                svg {
+                    color: #fff;
+                }
+
+                .MuiButtonBase-root {
+                    color: #fff;
+                    padding: 0 !important;
+                }
+
+                .MuiInputAdornment-root {
+                    .MuiTypography-root {
+                        color: #fff;
                     }
                 }
             }
         }
+        .modal-close-btn {
+            position: absolute;
+            z-index: 1;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            background: #016c7d00 !important;
+        }
     }
-    
-    // }
+
+   
+}
+
+// }

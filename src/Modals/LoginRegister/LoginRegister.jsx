@@ -3,6 +3,7 @@ import { MDBContainer, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter, M
 import "./LoginRegister.scss";
 import Login from "./Login/Login.jsx";
 import Register from './Register/Register.jsx';
+import Close from '@material-ui/icons/Close';
 class LoginRegister extends Component {
     state = {
         isSigninView: true,
@@ -17,7 +18,10 @@ class LoginRegister extends Component {
         let { isActive, } = this.props;
         let { isSigninView } = this.state;
         return (
-            <MDBModal isOpen={isActive} toggle={() => this.props.onModalActionHandle(false)} fullHeight position="right">
+            <MDBModal isOpen={isActive} toggle={() => this.props.onModalActionHandle(true)} fullHeight position="right">
+                <MDBBtn className="modal-close-btn" tag="a" size="sm" floating gradient="blue" onClick={() => this.props.onModalActionHandle(false)}>
+                    <Close/>
+                </MDBBtn>
                 <MDBCard className='card-image' style={{ backgroundImage: 'url(https://mdbootstrap.com/img/Photos/Others/pricing-table7.jpg)' }}>
                     <div className='text-white rgba-stylish-strong py-5 px-5 z-depth-4'>
                         <div className='text-center'>
