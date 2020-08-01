@@ -33,12 +33,12 @@ class LoginRegister extends Component {
                             </h3>
                         </div>
                         {isSigninView ? <Login /> : <Register />}
-                        <p className="font-medium white-text text-right d-flex justify-content-center  pt-2">  or Sign in with:</p>
+                        {/* <p className="font-medium white-text text-right d-flex justify-content-center  pt-2">  or Sign in with:</p>
                         <div className="row my-3 d-flex justify-content-center social-media-btn">
                             <MDBBtn social="fb">  <MDBIcon fab icon="facebook-f" className="pr-1" /> Facebook</MDBBtn>
                             <MDBBtn social="tw"> <MDBIcon fab icon="twitter" className="pr-1" /> Twitter  </MDBBtn>
                             <MDBBtn social="gplus"> <MDBIcon fab icon="google-plus-g" className="pr-1" /> Google + </MDBBtn>
-                        </div>
+                        </div> */}
                         <MDBCol md='12'>
                             {isSigninView ?
                                 <p className='font-small white-text d-flex justify-content-end'> Have not an account? <a href='#!' className='green-text ml-1 font-weight-bold' onClick={() => this.onViewChangeHandle(false)}> Sign Up</a></p>

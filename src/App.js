@@ -10,7 +10,7 @@ import Navbar from "./Components/Navbar/Navbar.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import Sidebar from "./Components/Sidebar/Sidebar.jsx";
 import Routes from "./Routes";
-
+// Constant
 const customHistory = createBrowserHistory();
 class App extends Component {
   render() {

@@ -19,11 +19,9 @@
             transition-property: top, bottom, width;
 
             .main-route {
-                position: relative;
                 min-height: 693px;
-                // background: #f1f3f6;
                 padding: 15px;
-                overflow: hidden;
+                overflow-x: hidden;
                 z-index: 0;
 
             }
@@ -80,3 +78,8 @@
     transform-origin: 0 0 !important;
     font-weight: 500 !important;
 }
+// display
+.display-none{
+    display: none !important;
+}
+

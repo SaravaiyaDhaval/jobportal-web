@@ -14,3 +14,29 @@
     background-color: #96271a !important;
 
 }
+
+// Toast message
+
+.notification-toast-right {
+    position: fixed;
+    z-index: 9999999999999;
+    top: 10px;
+    right: 10px;
+    min-width: 250px;
+    .toast-header {
+        background: white !important;
+    }
+    .toast-body{
+        background: #252525 !important;
+    }
+    &.error {
+        .toast-header {
+            color: #ff3547 !important;
+        }
+    }
+    &.success {
+        .toast-header {
+            color: #388e3c !important;
+        }
+    }
+}
