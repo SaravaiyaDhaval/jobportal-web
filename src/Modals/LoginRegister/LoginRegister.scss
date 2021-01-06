@@ -1,0 +1,136 @@
+// .Login {
+.modal-backdrop.show {
+    // opacity: 0;
+}
+
+.modal {
+
+    // position: relative;
+    .modal-content {
+        z-index: 11;
+        position: relative;
+
+        .card {
+            width: 100% !important;
+            height: 100%;
+
+            .rgba-stylish-strong {
+                height: 100%;
+                background-color: #00000078;
+                padding: 3rem 30px 15px !important;
+            }
+
+            .password-field {
+                margin-bottom: 4px;
+            }
+
+            .social-media-btn {}
+
+            .md-form {
+                .prefix {
+                    &.active {
+                        color: #ffffff;
+                    }
+                }
+
+                label {
+                    color: #ffffff !important;
+
+                    &.active {
+                        color: #ffffff !important;
+                    }
+                }
+
+                input {
+                    border-bottom: 1px solid #ffffff;
+                    color: #ffffff !important;
+
+                    &.active,
+                    &:hover,
+                    &:focus {
+                        border-bottom: 2px solid #ffffff;
+                    }
+                }
+            }
+
+            .MuiFormControl-root {
+                .MuiFormLabel-root {
+                    color: #fff;
+                    .MuiFormLabel-asterisk{
+                        color: #fff;
+                    }
+                    &.Mui-error{
+                        color: #ffb5b0 !important;
+                        .MuiFormLabel-asterisk{
+                            color: #ffb5b0 !important;
+                        }
+                    }
+                    
+                }
+
+                .MuiInputBase-root {
+                    color: #fff;
+
+                    &::before {
+                        border-bottom: 1px solid #ffffff;
+                    }
+
+                    &::after {
+                        border-bottom: 2px solid #ffffff;
+                    }
+                    &.Mui-error{
+                        color: #ffb5b0 !important;
+                        &::before {
+                            border-bottom: 1px solid #ffb5b0;
+                        }
+    
+                        &::after {
+                            border-bottom: 2px solid #ffb5b0;
+                        }
+                        .MuiButtonBase-root, .MuiTypography-root, svg {
+                            color: #ffb5b0;
+                        }
+                    }
+                }
+                .MuiFormHelperText-root{
+                    color: #fff;
+                    &.Mui-error{
+                        color: #ffb5b0 !important;
+                    }
+                } 
+
+                svg {
+                    color: #fff;
+                }
+
+                .MuiButtonBase-root {
+                    color: #fff;
+                    padding: 0 !important;
+                }
+
+                .MuiInputAdornment-root {
+                    .MuiTypography-root {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            z-index: 1;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            background: #016c7d00 !important;
+        }
+    }
+
+
+}
+
+// }

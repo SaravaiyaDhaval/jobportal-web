@@ -1,0 +1,26 @@
+#ProductCarousel {
+    .carousel-multi-item {
+        position: relative;
+        margin-bottom: 0;
+        .controls-top {
+            position: absolute;
+            top: 0;
+            left: -20px;
+            right: -20px;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .btn-floating{
+                background: linear-gradient(40deg, #45cafc, #303f9f) !important;
+            }
+        }
+        .carousel-item {
+            .col-md-2{
+                padding-left: 5px;
+                padding-right: 5px;
+
+            }
+        }
+    }
+}

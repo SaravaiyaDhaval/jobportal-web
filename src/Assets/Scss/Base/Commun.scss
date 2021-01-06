@@ -1,0 +1,85 @@
+.app-main {
+    .side-bar-nav {
+        padding-top: 59px;
+        display: flex;
+
+        .main-left-side-nav {
+            position: relative;
+            // width: 240px;
+            // min-width: 240px;
+        }
+
+        .main-right-side-nav {
+            width: 100%;
+            -webkit-transition-timing-function: linear, linear, ease;
+            transition-timing-function: linear, linear, ease;
+            -webkit-transition-duration: .5s, .5s, .55s;
+            transition-duration: .5s, .5s, .55s;
+            -webkit-transition-property: top, bottom, width;
+            transition-property: top, bottom, width;
+
+            .main-route {
+                min-height: 693px;
+                padding: 15px;
+                overflow-x: hidden;
+                z-index: 0;
+
+            }
+
+        }
+    }
+
+}
+
+// Color
+// .indigo {
+//     background-color: #1b74bc !important;
+// }
+.md-form {
+    .react-tel-input {
+        .form-control {
+            width: 100%;
+        }
+
+        .flag-dropdown,
+        .flag-dropdown.open {
+            background-color: transparent;
+            border: 0;
+
+            & .selected-flag {
+                background: transparent;
+
+                .flag {
+                    .arrow {
+                        border-top: 4px solid #fff;
+                    }
+
+                    .arrow.up {
+                        border-bottom: 4px solid #fff;
+                        border-top: 0;
+                    }
+                }
+            }
+
+            .country-list {
+                background: #f8f9fa;
+                color: black;
+            }
+        }
+    }
+}
+
+.date-lable {
+    transform: translateY(-15px) scale(01) !important;
+    transform-origin: 0 0 !important;
+}
+.number-lable{
+    transform: translateY(-14px) scale(0.7) !important;
+    transform-origin: 0 0 !important;
+    font-weight: 500 !important;
+}
+// display
+.display-none{
+    display: none !important;
+}
+

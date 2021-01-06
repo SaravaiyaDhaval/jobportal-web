@@ -1,0 +1,29 @@
+#RoundLoader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .loader-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .MuiAvatar-root {
+            z-index: 1;
+            position: absolute;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .progress-bar {
+            background: transparent;
+        }
+    }
+}

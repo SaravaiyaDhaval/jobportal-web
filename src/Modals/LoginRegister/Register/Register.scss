@@ -1,0 +1,160 @@
+#Register {
+    // height: 100%;
+
+    .md-stepper-horizontal {
+        display: table;
+        width: 100%;
+        margin: 0 auto;
+        background-color: transparent;
+
+        .md-step {
+            display: table-cell;
+            position: relative;
+            padding: 6px 0;
+
+            button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                padding: 0;
+            }
+
+            &:hover {
+                // background-color: rgba(0, 0, 0, 0.04);
+
+                .md-step-circle {
+                    // background-color: #757575;
+                }
+            }
+
+            &:active {
+                background-color: rgba(0, 0, 0, 0.04);
+                border-radius: 15% / 75%;
+            }
+
+            &:first-child {
+                &:active {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+
+                .md-step-bar-left {
+                    display: none;
+                }
+            }
+
+            &:last-child {
+                &:active {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+
+                .md-step-bar-right {
+                    display: none;
+                }
+            }
+
+            .md-step-title {
+                margin-top: 16px;
+                font-size: 16px;
+                font-weight: 600;
+                text-align: center;
+                color: rgba(0, 0, 0, .26);
+            }
+
+            .md-step-optional {
+                text-align: center;
+                color: rgba(0, 0, 0, .26);
+                font-size: 12px;
+            }
+
+            .md-step-bar-left {
+                position: absolute;
+                top: 36px;
+                height: 1px;
+                border-top: 1px solid #DDDDDD;
+                left: 0;
+                right: 50%;
+                margin-right: 20px;
+            }
+
+            .md-step-bar-right {
+                position: absolute;
+                top: 36px;
+                height: 1px;
+                border-top: 1px solid #DDDDDD;
+                right: 0;
+                left: 50%;
+                margin-left: 20px;
+            }
+        }
+
+        .md-step.active {
+            .md-step-circle {
+                background-color: rgb(33, 150, 243);
+            }
+
+            .md-step-title {
+                font-weight: 600;
+                color: rgba(0, 0, 0, .87);
+            }
+
+            .md-step-optional {
+                color: rgba(0, 0, 0, .54);
+            }
+        }
+
+        .md-step.done {
+            .md-step-circle {
+                &:before {
+                    font-family: 'FontAwesome';
+                    font-weight: 100;
+                    content: "\f00c";
+                }
+
+                * {
+                    display: none;
+                }
+            }
+        }
+
+        .md-step.editable {
+            .md-step-circle {
+                * {
+                    display: none;
+                }
+
+                -moz-transform: scaleX(-1);
+                -o-transform: scaleX(-1);
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+
+                &:before {
+                    font-family: 'FontAwesome';
+                    font-weight: 100;
+                    content: "\f040";
+                }
+            }
+        }
+
+        .md-step.active.done {
+            .md-step-title {
+                font-weight: 600;
+            }
+        }
+
+        .md-step.active.editable {
+            .md-step-title {
+                font-weight: 600;
+            }
+        }
+    }
+
+    .form-check {
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+
+}
