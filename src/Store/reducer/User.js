@@ -8,7 +8,7 @@ const initialState = {
 
 const user = (user = initialState, action = {}) => {
     console.log("Cookies-->",Cookies)
-    debugger
+    
     switch (action.type) {
         case types.SET_TOKEN:
             return Object.assign({}, user, {

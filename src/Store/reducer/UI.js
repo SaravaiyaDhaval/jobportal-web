@@ -5,7 +5,8 @@ const initialState = {
     notifications:[],
     alerts:[],
     modals: {
-        switch_profile: false,
+        loginModal: false,
+        registerModal: false,
     },
 }
 

@@ -29,7 +29,7 @@ class RoundLoader extends Component {
     }
 
     render() {
-        debugger
+        
         let { loading, size } = this.state;
         console.log("loading --->", loading)
         // verifyAccountData ? verifyAccountData.loading : false

@@ -38,7 +38,7 @@ class VerifyAccount extends Component {
   render() {
     let { verifyAccountData } = this.state;
     console.log("verifyAccountData", verifyAccountData.loading)
-    debugger
+    
     return (
       <div id="VerifyAccount">
         <RoundLoader loading={verifyAccountData.loading} size={80} />

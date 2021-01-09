@@ -4,9 +4,11 @@ import {
     MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
     MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon
 } from "mdbreact";
-import LoginRegister from "./../../Modals/LoginRegister/LoginRegister.jsx";
+import LoginModal from "./../../Modals/LoginModal/LoginModal";
+import RegisterModal from "./../../Modals/RegisterModal/RegisterModal"
 import { connect } from 'react-redux'
 import { logout } from '../../Actions/Auth';
+import { toggleModal } from "./../../Actions/UI";
 
 class Header extends Component {
     constructor(props) {
@@ -24,9 +26,14 @@ class Header extends Component {
             isLoginModalActive: isActive
         })
     }
-    onLogout =() =>{
-        let {dispatch}= this.props;
+    onLogout = () => {
+        let { dispatch } = this.props;
         dispatch(logout());
+    }
+    onModalHandle = (isOpen, key) => {
+        let { dispatch } = this.props;
+        dispatch(toggleModal(isOpen, key))
+
     }
     render() {
         let { token } = this.props;
@@ -47,9 +54,14 @@ class Header extends Component {
                         </MDBNavbarNav>
                         <MDBNavbarNav right>
                             {!token ?
-                                <MDBNavItem onClick={() => this.onLoginRegisterModalHandle(true)}>
-                                    <button className="btn btn-sm align-middle btn-outline-white" type="button">Login</button>
-                                </MDBNavItem>
+                                <>
+                                    <MDBNavItem onClick={() => this.onModalHandle(true, "loginModal")}>
+                                        <button className="btn btn-sm align-middle btn-outline-white" type="button">Login</button>
+                                    </MDBNavItem>
+                                    <MDBNavItem onClick={() => this.onModalHandle(true, "registerModal")}>
+                                        <button className="btn btn-sm align-middle btn-outline-white" type="button">Register</button>
+                                    </MDBNavItem>
+                                </>
                                 :
                                 <MDBNavItem onClick={() => this.onLogout()}>
                                     <button className="btn btn-sm align-middle btn-outline-white" type="button">Logout</button>
@@ -71,7 +83,8 @@ class Header extends Component {
                         </MDBNavbarNav>
                     </MDBCollapse>
                 </MDBNavbar>
-                <LoginRegister isActive={isLoginModalActive} onModalActionHandle={this.onLoginRegisterModalHandle} />
+                <LoginModal />
+                <RegisterModal/>
             </div>
         );
     }

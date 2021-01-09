@@ -9,7 +9,6 @@ const makeJson = async (response, status) => {
 }
 
 const responseHandler = alert => response => {
-    debugger
     const contentType = response.headers.get('content-type')
     if (contentType && contentType.indexOf('application/json') !== -1) {
         const promise = makeJson(response, response.status)
@@ -63,7 +62,6 @@ export const get = (...data) => {
  
 export const post = (...data) => {
     const [url, alert = true, body] = data;
-    debugger
     return fetch(`${API_URL}/${url}`, {
         method: 'post',
         headers: getHeader(),

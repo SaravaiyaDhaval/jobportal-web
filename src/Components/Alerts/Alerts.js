@@ -10,7 +10,7 @@ class Alert extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        debugger
+        
         const { messages } = this.props.alerts
         if (nextProps.alerts.messages.length !== messages.length) {
             this.showMessages(messages)
