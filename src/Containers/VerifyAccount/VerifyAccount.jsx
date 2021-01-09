@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./VerifyAccount.scss";
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { verifyUserAccount } from './Actions/Index';
+import { verifyUserAccount } from '../../Actions/Auth';
 import * as qs from 'query-string';
 import RoundLoader from './../../Components/Loaders/RoundLoader/RoundLoader.jsx';
 // import { MDBNotification } from "mdbreact";
@@ -33,7 +33,7 @@ class VerifyAccount extends Component {
     })
     let location = this.props.location
     const verifyToken = qs.parse(location.search);
-    this.props.verificatoinUserData(verifyToken)
+    // this.props.verificatoinUserData(verifyToken)
   }
   render() {
     let { verifyAccountData } = this.state;
@@ -60,6 +60,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ verificatoinUserData: verifyUserAccount }, dispatch);
+  return {}
+  // bindActionCreators({ verificatoinUserData: verifyUserAccount }, dispatch);
 }
 export default connect(mapStateToProps, mapDispatchToProps)(VerifyAccount);

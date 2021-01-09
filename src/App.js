@@ -9,6 +9,7 @@ import Header from "./Components/Header/Header.jsx";
 import Navbar from "./Components/Navbar/Navbar.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import Sidebar from "./Components/Sidebar/Sidebar.jsx";
+import Alert from "./Components/Alerts/Alerts"
 import Routes from "./Routes";
 // Constant
 const customHistory = createBrowserHistory();
@@ -30,6 +31,7 @@ class App extends Component {
               <Footer />
             </div>
           </div>
+          <Alert />
         </div>
       </Router>
     );

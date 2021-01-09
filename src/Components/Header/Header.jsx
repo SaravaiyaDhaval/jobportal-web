@@ -5,25 +5,33 @@ import {
     MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon
 } from "mdbreact";
 import LoginRegister from "./../../Modals/LoginRegister/LoginRegister.jsx";
+import { connect } from 'react-redux'
+import { logout } from '../../Actions/Auth';
+
 class Header extends Component {
     constructor(props) {
         super(props);
-        this.state = { isOpen: false, isLoginModalActive:false };
+        this.state = { isOpen: false, isLoginModalActive: false };
     }
 
     toggleCollapse = () => {
         let { isOpen } = this.state;
         this.setState({ isOpen: !isOpen });
     }
-    onLoginRegisterModalHandle = (isActive, actionData)=>{
-        let {isLoginModalActive} = this.state;
+    onLoginRegisterModalHandle = (isActive, actionData) => {
+        let { isLoginModalActive } = this.state;
         this.setState({
             isLoginModalActive: isActive
         })
     }
+    onLogout =() =>{
+        let {dispatch}= this.props;
+        dispatch(logout());
+    }
     render() {
+        let { token } = this.props;
         let { isOpen, isLoginModalActive } = this.state;
-
+        console.log("token--->", token)
         return (
             <div id="Header">
                 <MDBNavbar color="indigo" dark expand="md">
@@ -34,13 +42,19 @@ class Header extends Component {
                     <MDBCollapse id="navbarCollapse3" isOpen={isOpen} navbar>
                         <MDBNavbarNav left>
                             <MDBNavItem className="search-nav-item">
-                                <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                                <input className="form-control" type="search" placeholder="Search" aria-label="Search" />
                             </MDBNavItem>
                         </MDBNavbarNav>
                         <MDBNavbarNav right>
-                            <MDBNavItem onClick={() => this.onLoginRegisterModalHandle(true)}>
-                                <button class="btn btn-sm align-middle btn-outline-white" type="button">Login</button>
-                            </MDBNavItem>
+                            {!token ?
+                                <MDBNavItem onClick={() => this.onLoginRegisterModalHandle(true)}>
+                                    <button className="btn btn-sm align-middle btn-outline-white" type="button">Login</button>
+                                </MDBNavItem>
+                                :
+                                <MDBNavItem onClick={() => this.onLogout()}>
+                                    <button className="btn btn-sm align-middle btn-outline-white" type="button">Logout</button>
+                                </MDBNavItem>
+                            }
                             <MDBNavItem>
                                 <MDBDropdown>
                                     <MDBDropdownToggle nav caret>
@@ -57,9 +71,14 @@ class Header extends Component {
                         </MDBNavbarNav>
                     </MDBCollapse>
                 </MDBNavbar>
-                <LoginRegister isActive={isLoginModalActive} onModalActionHandle={this.onLoginRegisterModalHandle}/>
+                <LoginRegister isActive={isLoginModalActive} onModalActionHandle={this.onLoginRegisterModalHandle} />
             </div>
         );
     }
 }
-export default Header
+function mapStateToProps(state) {
+    return ({
+        token: state.user.token,
+    })
+}
+export default connect(mapStateToProps,)(Header);

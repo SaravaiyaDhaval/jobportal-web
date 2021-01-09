@@ -15,4 +15,7 @@
             }
         }
     }
+    .carousel-control-prev, .carousel-control-next{
+        z-index: 0;
+    }
 }

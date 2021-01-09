@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { changeState } from './../../Store/action/action';
 import "./Home.scss";
 import CarouselView from "./CarouselView/CarouselView.jsx";
 import ProductCursole from "./ProductCarousel/ProductCarousel.jsx";
@@ -8,9 +7,7 @@ import { MDBNotification } from "mdbreact";
 
 class Home extends Component {
   render() {
-    let { stories } = this.props;
     let { verifyAccountData } = this.props;
-    debugger
     return (
       <div id="Home">
         <CarouselView />
@@ -34,15 +31,6 @@ class Home extends Component {
 function mapStateToProps(state) {
   return ({
     verifyAccountData: state.verifyAccountData,
-    stories: state.rootReducer.stories
   })
 }
-function mapDispatchProps(dispatch) {
-  return ({
-    changeStateToReducer: (stories) => {
-      dispatch(changeState(stories))
-    }
-  })
-}
-
-export default connect(mapStateToProps, mapDispatchProps)(Home);
+export default connect(mapStateToProps, )(Home);

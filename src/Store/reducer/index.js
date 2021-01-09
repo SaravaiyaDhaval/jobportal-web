@@ -1,10 +1,12 @@
-import reducer from './reducer';
-import ragisterData from "./Register/Register";
-import verifyAccount from "./VerifyAccount/VerifyAccount";
+import ragisterData from "./Auth";
+import verifyAccount from "./VerifyAccount";
+import user from "./User"
+import ui  from "./UI";
 import {combineReducers} from 'redux';
 
 export default combineReducers({
-    rootReducer:reducer,
     ragisterData: ragisterData,
-    verifyAccountData: verifyAccount
+    verifyAccountData: verifyAccount,
+    ui:ui,
+    user:user
 })
