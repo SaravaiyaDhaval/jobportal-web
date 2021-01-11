@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import "./Home.scss";
-import CarouselView from "./CarouselView/CarouselView.jsx";
-import ProductCursole from "./ProductCarousel/ProductCarousel.jsx";
+import CarouselView from "../../Components/CarouselView/CarouselView.jsx";
+import ProductCursole from "../../Components/ProductCarousel/ProductCarousel.jsx";
 import { MDBNotification } from "mdbreact";
+import { MDBCard, MDBCardTitle, MDBCardText, MDBContainer, MDBInput, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 
 class Home extends Component {
   render() {

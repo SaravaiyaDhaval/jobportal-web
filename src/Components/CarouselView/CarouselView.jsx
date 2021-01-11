@@ -1,7 +1,6 @@
 import React from "react";
 import "./CarouselView.scss";
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from
-  "mdbreact";
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer,MDBRow,MDBCol } from "mdbreact";
 
 const CarouselView = () => {
   return (
