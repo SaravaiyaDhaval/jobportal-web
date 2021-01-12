@@ -4,7 +4,7 @@ import "./Sidebar.scss";
 class Sidebar extends Component {
     constructor(props) {
         super(props);
-        this.state = { isSidebarMinimized: false, selectedCollepsMenu: null };
+        this.state = { isSidebarMinimized: true, selectedCollepsMenu: null };
 
     }
     onSidebarMinmize = () => {
@@ -25,7 +25,6 @@ class Sidebar extends Component {
                 selectedCollepsMenu: id
             })
         }
-
     }
 
     render() {

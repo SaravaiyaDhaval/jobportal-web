@@ -3,8 +3,18 @@ import {
   MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardImage,
   MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBBox
 } from "mdbreact";
+import { useHistory } from "react-router-dom";
+
 import "./ProductCarousel.scss";
+
 const ProductCarousel = ({ sliderTitle }) => {
+  const history = useHistory();
+
+  const routeChange = () =>{ 
+    let path = `details-view`; 
+    history.push(path);
+  }
+
   return (
     <div id="ProductCarousel">
       <MDBBox tag='p' className="h4">{sliderTitle ? sliderTitle : "Product 1"}</MDBBox>
@@ -21,7 +31,7 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -34,7 +44,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -47,7 +58,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -60,7 +72,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -73,7 +86,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -86,7 +100,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -101,7 +116,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -114,7 +130,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -127,7 +144,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -140,7 +158,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -153,7 +172,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -166,7 +186,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -181,7 +202,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -194,7 +216,7 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -207,7 +229,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -220,7 +243,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -233,7 +257,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>
@@ -246,7 +271,8 @@ const ProductCarousel = ({ sliderTitle }) => {
                       Some quick example text to build on the card title and
                       make up the bulk of the card's content.
                     </MDBCardText>
-                    <MDBBtn color="indigo">View Details</MDBBtn>
+                    <MDBBtn color="indigo" onClick={routeChange}>View Details</MDBBtn>
+
                   </MDBCardBody>
                 </MDBCard>
               </MDBCol>

@@ -13,7 +13,8 @@
         // background-position: top;
         .navbar-brand {
             color: #fff;
-            filter: invert(1)drop-shadow(2px 4px 6px black);
+            // filter: invert(1)drop-shadow(2px 4px 6px black);
+            filter: invert(1);
 
             .logo-style {
                 height: 45px;

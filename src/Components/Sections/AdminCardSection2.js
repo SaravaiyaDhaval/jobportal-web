@@ -6,7 +6,7 @@ const AdminCardSection2 = ({ title, subTitle, icon, theme, color, progressRatio,
     <MDBCard color={theme + "-color"} className="classic-admin-card mb-4">
       <MDBCardBody>
         <div className="float-right">
-          <MDBIcon far icon={icon} />
+          <MDBIcon  icon={icon} />
         </div>
         <p className="white-text">{title}</p>
         <h4><strong>{subTitle}</strong></h4>
